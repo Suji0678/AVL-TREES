@@ -135,23 +135,23 @@ if __name__ == "__main__":
             course = input("Enter Course: ")
             student = Student(eid, name, course)
             root = tree.insert(root, student)
-            print("✅ Student added successfully!")
+            print(" Student added successfully!")
         elif choice == 'b':
             eid = int(input("Enter Enrollment ID to delete: "))
             root = tree.delete(root, eid)
-            print("✅ Record deleted (if it existed).")
+            print(" Record deleted (if it existed).")
         elif choice == 'c':
             eid = int(input("Enter Enrollment ID to search: "))
             student = tree.search(root, eid)
-            print(student if student else "❌ Student not found!")
+            print(student if student else " Student not found!")
         elif choice == 'd':
-            print("\n📋 All Enrollment Records (Sorted by ID):")
+            print("\n All Enrollment Records (Sorted by ID):")
             tree.inorder(root)
         elif choice == 'e':
             total = tree.count_nodes(root)
-            print(f"📊 Total Enrollments: {total}")
+            print(f" Total Enrollments: {total}")
         elif choice == 'f':
-            print("👋 Exiting... Have a nice day!")
+            print(" Exiting... Have a nice day!")
             break
         else:
-            print("❌ Invalid choice. Please try again.")
+            print(" Invalid choice. Please try again.")
